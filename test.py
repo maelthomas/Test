@@ -11,8 +11,9 @@ leds_vertes = [LED(27), LED(17), LED(3), LED(2)]
 rgb = RGBLED(red=16, green=20, blue=21, active_high=False)
 
 # 3. Configuration du Bouton
-# GPIO 26, relié au GND (Pull-up interne par défaut)
-bouton = Button(13, pull_up=False)
+
+# bounce_time=0.1 ignore les signaux de moins de 100ms
+bouton = Button(13, pull_up=False, bounce_time=0.1)
 
 def test_initial():
     print("--- Lancement du test matériel ---")
