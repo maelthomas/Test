@@ -4,7 +4,7 @@ from time import sleep
 
 # 1. Configuration des LEDs Vertes
 # Liste de tes GPIO : 2, 3, 4, 17
-leds_vertes = [LED(2), LED(3), LED(17), LED(27)]
+leds_vertes = [LED(27), LED(17), LED(3), LED(2)]
 
 # 2. Configuration de la LED RGB (Anode Commune)
 # Ordre : R=16, G=20, B=21 | active_high=False pour l'Anode Commune
@@ -12,7 +12,7 @@ rgb = RGBLED(red=16, green=20, blue=21, active_high=False)
 
 # 3. Configuration du Bouton
 # GPIO 26, relié au GND (Pull-up interne par défaut)
-bouton = Button(13, pull_up=False))
+bouton = Button(13, pull_up=False)
 
 def test_initial():
     print("--- Lancement du test matériel ---")
